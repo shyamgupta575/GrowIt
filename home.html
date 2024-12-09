@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagonal Gradient Background</title>
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style type="text/css">
+      
+.video-bg{
+  
+    top:0;
+    right:40;
+  min-width:100%;
+  min-height: 100%;
+}
+.carousel-caption {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
+            right: 10%; /* Adjust as needed */
+            color: #fff; /* Set text color */
+
+        }
+
+        .marquee-content {
+  display: flex;
+  animation: scrolling 10s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+/*   flex: 0 0 20vw; */
+/*   margin: 0 2vw; */
+}
+.marquee {
+overflow: hidden; 
+}
+.marquee-item img {
+  display: block;
+  width: 100%;
+/*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translatex(-144vw); }
+}
+
+.home-slider img {
+  width: 100%;
+  height: auto;
+    padding: 5px;
+}
+
+
+.slick-dots {
+    text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0;
+  li {
+    display:inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    &.slick-active {
+      button {
+        background-color:black;
+      }
+    }
+    button {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+      background-color:#999;
+      border:none;
+      width: 15px;
+      height: 15px;
+      border-radius:50%;
+    }
+        :hover{
+            background-color: black;
+        }
+  }
+}
+
+/* Custom Arrow */
+.prev{
+    color: #999;
+    position: absolute;
+    top: 38%;
+    left: -2em;
+    font-size: 1.5em;
+        :hover{
+            cursor: pointer;
+            color: black;
+        }
+}
+.next{
+    color: #999;
+    position: absolute;
+    top: 38%;
+    right: -2em;
+    font-size: 1.5em;
+    :hover{
+            cursor: pointer;
+            color: black;
+        }
+}
+
+@media screen and (max-width: 800px) {
+    .next {
+        display: none !important;
+    }
+}
+
+
+.container1 {
+  position: relative;
+  width: 50%;
+}
+.container1 img{
+    height:230px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:rgb(20, 52, 88);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  border-radius: 5%;
+}
+
+.container1:hover .overlay {
+  height: 100%;
+  padding: 5px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left:45%;
+  right:0%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm p-3 px-5">
+        <div class="container-fluid">
+        <a class="navbar-brand text-light" href="javascript:void(0)">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav ms-auto" style="gap: 70px;">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact us</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+     <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-inner">
+                <div class="carousel-item active top-section" id="carousal1">  
+                    <img class="video-bg"
+                     src="https://mediaandmore.co.uk/wp-content/uploads/2020/06/web-development-banner.jpg"
+                    >
+                    <div class="carousel-caption">
+                        <h1 class="mt-3" style=" font-size: 5rem;">We Provide   </h1>
+                        <h2 class="mt-3" style="font-size: 3rem;"> Customize Service of </h2>        
+                        <h4 class="mt-3" style="font-size: 2rem;"><a href="#">Web Design</a></h4>
+                    </div>
+                </div>
+                <div class="carousel-item top-section" id="carousal1">
+                    <img class="video-bg"
+                     src="https://mediaandmore.co.uk/wp-content/uploads/2020/06/web-development-banner.jpg"
+                    >
+                    <div class="carousel-caption">
+                        <h1 class="mt-3" style=" font-size: 5rem;">We Provide   </h1>
+                        <h2 class="mt-3" style="font-size: 3rem;"> Customize Service of </h2>        
+                        <h4 class="mt-3" style="font-size: 2rem;"><a href="#">App development</a></h4>
+                    </div>
+                </div>
+                <div class="carousel-item top-section" id="carousal1">
+                    <img class="video-bg"
+                     src="https://mediaandmore.co.uk/wp-content/uploads/2020/06/web-development-banner.jpg"
+                    >
+                    <div class="carousel-caption">
+                        <h1 class="mt-3" style=" font-size: 5rem;">We Provide   </h1>
+                        <h2 class="mt-3" style="font-size: 3rem;"> Customize Service of </h2>        
+                        <h4 class="mt-3" style="font-size: 2rem;"><a href="#">Digital Marketing</a></h4>
+                    </div>
+                </div> 
+                <div class="carousel-item top-section" id="carousal1">
+                    <img class="video-bg"
+                     src="https://mediaandmore.co.uk/wp-content/uploads/2020/06/web-development-banner.jpg"
+                    >
+                    <div class="carousel-caption">
+                        <h1 class="mt-3" style=" font-size: 5rem;">We Provide   </h1>
+                        <h2 class="mt-3" style="font-size: 3rem;"> Customize Service of </h2>        
+                        <h4 class="mt-3" style="font-size: 2rem;"><a href="#">Digital Marketing</a></h4>
+                    </div>
+                </div>
+                <div class="carousel-item top-section" id="carousal1">
+                    <img class="video-bg"
+                     src="https://mediaandmore.co.uk/wp-content/uploads/2020/06/web-development-banner.jpg"
+                    >
+                    <div class="carousel-caption">
+                        <h1 class="mt-3" style=" font-size: 5rem;">We Provide   </h1>
+                        <h2 class="mt-3" style="font-size: 3rem;"> Customize Service of </h2>        
+                        <h4 class="mt-3" style="font-size: 2rem;"><a href="#">Graphic designing</a></h4>
+                    </div>
+                </div>  
+                <div class="carousel-item top-section" id="carousal1">
+                    <img class="video-bg"
+                     src="https://mediaandmore.co.uk/wp-content/uploads/2020/06/web-development-banner.jpg"
+                    >
+                    <div class="carousel-caption">
+                        <h1 class="mt-3" style=" font-size: 5rem;">We Provide   </h1>
+                        <h2 class="mt-3" style="font-size: 3rem;"> Customize Service of </h2>        
+                        <h4 class="mt-3" style="font-size: 2rem;"><a href="#">Graphic designing</a></h4>
+                    </div>
+                </div>  
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button> 
+            </div>
+        </div>
+       
+        <div class="container ourwork" >
+            <h1 class="text-center" style="color: rgb(20, 52, 88);"><b>=======Our Work=======</b></h1>
+            <div class="row ">
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mt-5 mx-auto">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTykia7PXuhFlBJrXo5IJvGlYMhBV0t7FUscO06AiyERsKiLxGplBYymHwgJC_D6Lp5rF0&usqp=CAU" alt="Card image" >
+                        <div class="card-body">
+                              <h4 class="card-title">
+                                Premier web development company in India.</h4>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mt-5 mx-auto">
+                    <div class="card">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1xor1jV7hJGMOXsSyMdJIIo5IqNVJ5xCDcft343fwLpKhcBRldge0u29TaPQP8zYOs80&usqp=CAU" alt="Card image" >
+                        <div class="card-body">
+                              <h4 class="card-title">
+                                Foremost mobile app development firm in India.</h4>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mt-5 mx-auto">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://c8.alamy.com/comp/MYFJDP/digital-marketing-media-website-ad-email-social-network-seo-video-mobile-app-in-virtual-screenbusinessman-hand-show-3d-world-with-padlock-as-MYFJDP.jpg" alt="Card image">
+                        <div class="card-body">
+                              <h4 class="card-title">                     
+                                    Leading digital marketing firm in India.</h4>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mt-5 mx-auto">
+                    <div class="card " >
+                        <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Artificial_Intelligence_Logo_Design_27_1024x1024.png?v=1677198116" alt="Card image">
+                        <div class="card-body">
+                              <h4 class="card-title">                     
+                                    Empowering innovation, one pixel at a time.</h4>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mt-5 mx-auto">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://media.istockphoto.com/id/1277731016/photo/cloud-computing-concept-communication-network.jpg?s=612x612&w=0&k=20&c=n5cYq3RCP09eEKECwq1q9X9k8w3FfFsjL6nA009Jn3c=" alt="Card image">
+                        <div class="card-body">
+                              <h4 class="card-title">                     
+                                    Elevating digital experiences through cutting-edge design.</h4>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mt-5 mx-auto">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://media.licdn.com/dms/image/D4E12AQGJBS_1tTXCvA/article-cover_image-shrink_720_1280/0/1703109359896?e=2147483647&v=beta&t=zauy9ba0VMZIqunKOyajege2dEG6DX5_uhxpH7n0rKY" alt="Card image">
+                        <div class="card-body">
+                              <h4 class="card-title">                     
+                                    Graphic design solutions that redefine visual storytelling.</h4>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid home-aboutsec ">
+
+            <h1 class="text-center"><b>About us</b></h1>
+            <p class="text-center m-5">We're a dynamic group of experts excelling in advanced software development areas. Our foundation lies in extensive technical proficiency, sparked by creativity, and driven by an unyielding dedication to innovation.We're a versatile team of skilled professionals crafting innovative software solutions. Our commitment to pushing boundaries ensures we deliver impactful results tailored to your needs.</p>
+            <div class="row mt-5">
+                <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="row mt-5">
+                        <div class="col-lg-5 col-md-5 col-sm-9 col-9  mx-auto ">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h4 class=" mt-2">Our team spectrum of skills and expertise</h4>
+                                        <p class="text-dark mt-3">We specialize in Web 3.0 technologies, app development, UI/UX design, SEO strategies, Fintech solutions, Blockchain development, and beyond.</p>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="https://img.freepik.com/premium-photo/concept-soft-skills-human-resources-creativity-management_220873-12969.jpg" style="width:100%; height:230px; border-radius:10%;">  
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-9 col-9  mt-5 mx-auto ">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h4 class=" mt-2">Rapid project delivery with efficient timelines.</h4>
+                                        <p class="text-dark mt-3">Proficient teams equipped with streamlined workflows ensure swift project execution and scalability.</p>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="https://img.freepik.com/free-photo/still-life-business-roles-with-various-mechanism-pieces_23-2149352652.jpg?w=900&t=st=1714670906~exp=1714671506~hmac=2b75a89ede9aa190ec69bd6f5f075d0d8bb432deb3186590051f4b0afbf0b6cd" style="width:100%; height:230px; border-radius:10%;">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-5 col-lg-5 col-md-5 col-sm-9 col-9 mt-1 mt-sm-5 mx-auto">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h4 class=" mt-2">Adaptability and scalability are built into our approach.</h4>
+                                        <p class="text-dark mt-3">Our expertise enables seamless scaling of your digital services, adjusting as needed.</p>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="https://static3.depositphotos.com/1003380/209/i/450/depositphotos_2099237-stock-photo-building-tools.jpg" style="width:100%; height:230px; border-radius:10%;">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-5 col-lg-5 col-md-5 col-sm-9 col-9 mt-5 mx-auto">
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <h4 class=" mt-2">A fledgling enterprise poised for growth.</h4>
+                                        <p class="text-dark mt-3">We specialize in Web 3.0 technologies, app development, UI/UX design, SEO strategies, Fintech solutions, Blockchain development, and beyond.</p>
+                                        
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="https://static.toiimg.com/thumb/msid-99702405,width-400,height-225,resizemode-72/99702405.jpg" style="width:100%; height:230px; border-radius:10%;">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container home-servicesec p-5">
+            <i class="fa fa-quote-left quotes" aria-hidden="true" style=""></i>
+            <h1 class="text-center">Service we provide</h1>
+            <div class="row mt-5" style="align-items: center;">
+                
+                <div class="col-lg-5 col-md-9 col-sm-10 col-10 mx-auto">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/MM/EF/XV/126234189/dynamic-website-designing-services-500x500.png" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-10 col-sm-12 col-12 mx-auto">
+                    <h5 class="text-dark mt-2 "><i class="fa fa-arrow-right" aria-hidden="true" ></i>Increasing revenue, Accelerating customer growth .</h5>
+                    <h5 class="text-dark mt-2 "><i class="fa fa-arrow-right" aria-hidden="true"></i>Analyzing the market, Designing and Developing product.</h5>
+                    <h5 class="text-dark mt-2 "><i class="fa fa-arrow-right" aria-hidden="true"></i>Boosting performance, Accelerating efficiency.</h5>
+                    <h5 class="text-dark mt-2 "><i class="fa fa-arrow-right" aria-hidden="true"></i>Data Analysis, Real time stats and  predictions.</h5>
+                    <h5 class="text-dark mt-2 "><i class="fa fa-arrow-right" aria-hidden="true"></i>Expertise in development, implementing latest technologies.</h5>
+                    <h5 class="text-dark mt-2 "><i class="fa fa-arrow-right" aria-hidden="true"></i>Providing seamless support, honest consultation .</h5>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid home-client p-5">
+            <h1 class="text-center text-light">Our clients</h1>
+            <div class="row" style="margin-bottom:5%">
+                <div class="col-lg-6 mx-auto ">
+                    <p class="text-center mt-3">We aid businesses in amplifying their visibility—here are a few narratives of their journey. We're privileged to have cultivated strong partnerships.We specialize in helping businesses elevate their online presence—here are a few testimonials highlighting their success stories. We're grateful for the strong bonds we've forged along the way</p>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:-9%">
+                <div class="col-lg-9 mx-auto">
+                    <div class="marquee">
+                        <div class="marquee-content"> 
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-104-1.webp" alt="">
+                            </div>
+                        
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-95-1.webp" alt="">
+                            </div>
+                            
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-103-1.webp" alt="">
+                            </div>
+                            
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-101-1.webp" alt="">
+                            </div>
+                            
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-92-1.webp" alt="">
+                            </div>
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-97-1.webp" alt="">
+                            </div>
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-92-1.webp" alt="">
+                            </div>
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-92-1.webp" alt="">
+                            </div>
+                            
+                            
+
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-104-1.webp" alt="">
+                            </div>
+                        
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-95-1.webp" alt="">
+                            </div>
+                            
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-103-1.webp" alt="">
+                            </div>
+                            
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-101-1.webp" alt="">
+                            </div>
+                            
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-92-1.webp" alt="">
+                            </div>
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-97-1.webp" alt="">
+                            </div>
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-92-1.webp" alt="">
+                            </div>
+                            <div class="marquee-item">
+                              <img src="https://www.cvinfotech.com/wp-content/uploads/2022/08/Group-92-1.webp" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container home-slider" style="margin-top:10%">
+            <h1 class="text-center mt-5"><b>Our Team</b></h1>
+            
+            <div class="row mt-2">
+                <div class="col-lg-7 mx-auto"><p class="text-dark text-center">When your vision ignites a spark, it's essential to enlist top-tier developers to propel your mission forward. You seek adept professionals adept at crafting marketing strategies to drive your business objectives. With their expertise, they can transform your aspirations into tangible realities.
+            </p></div>
+                <div class="col-md-12 mt-5 heroSlider-fixed">
+                    <div class="overlay">
+                    </div>
+                     <!-- Slider -->
+                    <div class="slider responsive">
+                        <div class="container1">
+                            <img src="https://www.skillreactor.io/blog/wp-content/uploads/2024/04/web-development-projects.jpg" alt=""  style="border-radius: 5%;"/>
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://bestwebdevelopmentinstitute.wordpress.com/wp-content/uploads/2021/09/full-stack-developer-salary.jpg" alt="" style="border-radius: 5%;" />
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://media.gettyimages.com/id/1150528651/photo/successful-it-developer.jpg?s=170667a&w=gi&k=20&c=D0_yWjwncI_Me8yGddHkNNKuf5SaW70C05CMgu7N-uM=" alt="" style="border-radius: 5%;"/>
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://www.shutterstock.com/image-photo/portrait-male-software-developer-smiling-260nw-2218017797.jpg" alt="" style="border-radius: 5%;" />
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://as1.ftcdn.net/v2/jpg/05/40/63/14/1000_F_540631446_a39tc1A3Smh7U2xbyijSEKGrx4FbJW6F.jpg" alt="" style="border-radius: 5%;"/>
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://www.skillreactor.io/blog/wp-content/uploads/2024/04/web-development-projects.jpg" alt="" style="border-radius: 5%;"/>
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://as1.ftcdn.net/v2/jpg/05/40/63/14/1000_F_540631446_a39tc1A3Smh7U2xbyijSEKGrx4FbJW6F.jpg" alt="" style="border-radius: 5%;"/>
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container1">
+                            <img src="https://as2.ftcdn.net/v2/jpg/02/91/67/67/1000_F_291676731_8z8ofQk5dxtbv0SwLK4TQDuBpUkLczzb.jpg" alt="" style="border-radius: 5%;"/>
+                            <div class="overlay">
+                                <div class="text text-center"><p>hrkdith sharma</p>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </div>
+                    <div class="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </div>       
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid home-growth mt-5">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-10 col-10 mx-autosm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYseyL3__tPm2ZjJURuGkUY0ROOoOjOU_n6lWc6Hqpyw&s" class="img-fluid" style="height:500px">
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-10 col-10  bg-light mx-autosm ">
+                    <h4 class="text-center">We empower small and medium-sized businesses to attain sustainable growth.</h4>
+                    <p class="text-dark" >Feeling the momentum to launch but need assistance? Let us craft a tailored plan designed just for you.Feeling the momentum to launch but need assistance? Let us craft a tailored plan designed just for you</p>
+                </div>
+            </div>
+        </div>
+        <div class = "container client-reviews">
+            <h1 class="text-center mb-5">What our Clients Say about us</h1>
+            <div class="row " style="margin-top:8%">
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mx-auto">
+                    <div class =" card">
+                        <div class ="image">
+                            <img href = "#" src ="https://img.freepik.com/free-photo/young-handsome-business-man-choosing-car-car-showroom_1303-17901.jpg">
+                        </div>
+                        <div class = "content">
+                            <h3 class="text-light">Mobin R</h3>
+                                <p class="text-light">The team is very professional and they completed the project within stipulated time.They understood all my requirements .</p>
+                                <h1 class="text-light"><i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                   <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mx-auto">
+                    <div class =" card">
+                        <div class ="image">
+                            <img href = "#" src ="https://static.vecteezy.com/system/resources/thumbnails/033/129/417/small/a-business-man-stands-against-white-background-with-his-arms-crossed-ai-generative-photo.jpg">
+                        </div>
+                        <div class = "content">
+                            <h3 class="text-light">Himanshu Garg</h3>
+                                <p class="text-light">Excellent Service,thank you to everyone at Flown Developer for all their help highly recommend.</p>
+                                <h1 class="text-light"><i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 col-10 mx-auto">
+                    <div class =" card">
+                        <div class ="image">
+                            <img href = "#" src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQ9PGlL_8s8ksXCWNP0qx9tFwqH-eCUAgcrgsUGwW3E0qUFrnQSwcao1cP8QkBk1sVkY&usqp=CAU">
+                        </div>
+                        <div class = "content">
+                            <h3 class="text-light">Urvi Shelar</h3>
+                                <p class="text-light">Amazing work done within deadline. Super responsive team and great customer support. Kudos to Muddshir for her skills.</p>
+                                <h1 class="text-light"><i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="container-fluid footer">
+            <div class="row">
+                <div class="col-lg-3 text-center">
+                    <h1 class="text-light ">Logo</h1>
+                    <p>Lamentis boasts India's top-tier designers and developers, merging time-honored traditions with cutting-edge innovation to ensure unparalleled outcomes. Our ethos at Lamentis revolves around embracing technology at every turn.</p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2 scale1">
+                    <h1 class="text-light ">Service</h1>
+                    <p><a href="#">Our Clients</a></p>
+                    <p><a href="#">Technology</a></p>
+                    <p><a href="#">Team</a></p>
+                    <p><a href="#">FAQ</a></p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2 scale1">
+                    <h1 class="text-light ">About</h1>
+                    <p><a href="#">About us</a></p>
+                    <p><a href="#">Services</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms&conditions</a></p>
+                </div>
+                <div class="col-lg-3" class="text-light ">
+                    <h1 class="text-light " >Get in touch</h1>
+                    <input type="email" name="email" placeholder="email" style="height: 50px; width:90%"><a href="#"><i class="fa fa-paper-plane text-light" aria-hidden="true" style="font-size: 1.5rem;"></i></a>
+                </div>
+                <hr class="text-light mt-3" >
+                <p  style="color:gray; margin-top:3%; font-size: 1.2rem;"><span>&copy</span>Modeling Services. All rights reserved.</p>
+
+            </div>
+        </div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+            $('.responsive').slick({
+  dots: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Scribble&display=swap');
+
+/*reusabel*/
+:root{
+    --sizeper-50:50%;
+    --sizeper-5:5%;
+    --sizeper-3:3%;
+    --sizeper-2:2%;
+    --sizeper-10:10%;
+    --sizeper-15:15%;
+    --sizeper-100:100%;
+    --size-10:10px;
+    --size-5:5px;
+}
+:root{
+  --main-color:rgb(10, 36, 65);
+  --maintext:rgb(20, 52, 88);
+  --normaltext:rgb(35, 60, 88);
+  --lightnormaltext:rgb(35, 60, 88);
+  --whitecolor:white;
+}
+nav{
+  background-color: var(--maintext);
+}
+/*#mynavbar{
+  margin-left:10%;
+}*/
+.nav-item .nav-link{
+  color: var(--whitecolor);
+}
+.footer{
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200604/pngtree-beautiful-abstract-dark-blue-starry-galaxy-background-image_337887.jpg');
+  background-size: cover;
+  padding: 10% 8% 2% 8%!important;
+}
+.footer p{
+  color: var(--whitecolor);
+}
+.footer a {
+    text-decoration: none;
+    position: relative; /* Added */
+    color: var(--white-color);
+}
+
+.footer a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color:lightblue;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.footer a:hover::after,
+.footer a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+.footer .scale1 a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+.footer .scale1 a:hover::after,
+.footer .scale1 a:focus::after {
+    transform: scale(1);
+}
+.heading1{
+  color: var(--maintext-color);
+  font-weight: 620;
+}
+.span1{
+  color: var(--normaltext);
+}
+
+/*    portfolio page start*/
+  .portfolio{
+    background-image: url('https://img.freepik.com/free-vector/wireframe-background_23-2148051517.jpg');
+    background-size: cover;
+    padding:var(--sizeper-10)!important;
+
+  }
+  .portfolio-first{
+    padding:7% 4%!important;
+  }
+  .portfolio-recentlyworkon{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVdnL9Y66UMoPCNuElBAfTW2jPX2b4st-W41rsUtjaA&s');
+    background-size: cover;
+    padding:5% 15% 10% 15%!important;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+  }
+
+   .marquee-content {
+  display: flex;
+  animation: scrolling 10s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+/*   flex: 0 0 20vw; */
+/*   margin: 0 2vw; */
+}
+.marquee {
+overflow: hidden;
+/*background-color:var(--whitecolor); */
+padding: 3%;
+}
+.marquee-item img {
+  display: block;
+  width: 130px;
+  height: 130px;
+/*   padding: 0 20px; */
+}
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translatex(-144vw); }
+}
+
+.portfolio-services{
+  padding-top:10%;
+}
+.portfolio-services i{
+  font-size: 3rem;
+  color: var(--lightnormaltext);
+}
+.portfolio-services h5{
+  color: var(--lightnormaltext);
+}
+
+.portfolio-values{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://removal.ai/wp-content/uploads/2021/05/image11-1.png');
+  background-size: cover;
+  opacity: 0.8;
+  padding:var(--sizeper-10) var(--sizeper-5)!important;
+}
+.portfolio-values h3{
+  background-color: var(--whitecolor);
+  color: var(--normaltext);
+  padding:7%;
+  box-shadow: 5px 5px 5px 10px white;
+}
+.portfolio-values h3:hover{
+  box-shadow: 5px 5px 50px 10px white;
+
+}
+
+.portfolio-whowe{
+  padding: var(--sizeper-10);
+}
+/*portfolio page end*/
+/*contact page start*/
+
+
+.top-section1{
+    
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://png.pngtree.com/thumb_back/fh260/background/20230314/pngtree-beautiful-background-of-high-rise-buildings-image_1947772.jpg') ;
+    padding: 10% 10% 7% 10%;
+    opacity: 0.9;
+}
+/*contact page end*/
+.top-sections1{
+/*   background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/topsections1bg.jpg');*/
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    padding: 3% 10% 7% 10%;
+}
+.top-sections1 input:hover{
+
+    scale:1.03;
+    background-color:var(--maintext);
+    color:white;
+}
+.top-sections1 input{
+
+    height:50px;
+    width:100%;
+    padding-left:2% ;
+    color:var(--maintext);
+    background-color:rgb(228, 228, 228);
+    margin-top:3% ;
+    border: none!important;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Butterfly Kids", cursive;
+
+
+
+}
+.top-sections1 textarea:hover::placeholder{
+
+    color:white;
+    opacity: 1; /* Firefox */
+    
+}
+.top-sections1 input:hover::placeholder{
+
+    color:white;
+    opacity: 1;
+    
+}
+.top-sections1 textarea:hover{
+  scale:1.03;
+  background-color:var(--maintext);
+  color:white;
+
+}
+.top-sections1 textarea{
+   width:100%;
+   color:var(--maintext);
+   padding-left:2% ;
+   background-color:rgb(228, 228, 228) ;
+       border-radius: 7px;
+font-family: "Butterfly Kids", cursive;
+   }
+
+   .top-sections1 ::placeholder {
+     /* Firefox */
+     color:var(--maintext);
+     font-family: "Butterfly Kids", cursive;
+
+ }
+
+ .top-sections1 textarea::placeholder {
+     color:var(--maintext);
+     font-family: "Butterfly Kids", cursive;
+
+ }
+
+
+.query {
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(5,27,53) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, rgb(20,20,64),rgb(20,20,64));
+    padding:5%!important;
+  }
+  .query h5{
+    color:var(--whitecolor);
+  }
+  .query h5:hover{
+    background-color:var(--whitecolor);
+    color:var(--normaltext)!important;
+    scale:1.03;
+  }
+  .query img{
+    width:500px;
+  }
+
+  .span1{
+    display:inline-block;
+    width:400px;
+    height:300px;
+    border:1px solid white;
+    opacity: 0.6;
+
+}
+.query .colum1{
+    
+     text-align: center;
+      justify-content: center;
+}
+.query .colum1 a{
+    text-decoration: none;
+}
+.query .colum1 a h5{
+    color:white;
+    margin:7% 8% 0% 8%; 
+    border:2px solid var(--whitecolor);
+    border-radius: 5px;
+}
+/*end of contact page*/
+/*privacy policy start*/
+.privacy-policy{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url('https://inmettech.com/wp-content/uploads/2022/04/privacy-policy-banner.jpg');
+  padding: 10%!important;
+  background-size: cover;
+}
+.privacy-details{
+  padding: 10%!important;
+}
+.privacy-details h5{
+  background-color: var(--main-color);
+  padding: 0.8%;
+  color: var(--whitecolor);
+  border-radius: var(--size-5);
+  font-weight: 300;
+}
+/*privacy policy end*/
+/*technology page start*/
+
+  .technology
+  {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('https://t3.ftcdn.net/jpg/05/14/95/12/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg');
+    background-size: cover;
+    padding: 15% 8% 15% 8%!important ;
+  }
+  .technology-empower{
+    padding:var(--sizeper-10);
+  }
+  .technology-empower  .col-lg-5{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('https://media.istockphoto.com/id/1300754614/photo/global-communication-network-concept-planet-earth-in-cyberspace-3d-rendering.jpg?s=612x612&w=0&k=20&c=K547xMNinQ-ZXHbYNUXFWT5r5RqLApoC9fEuU0NH2dM=');
+    opacity: 0.9;
+    color: var(--whitecolor);
+      border:2px solid var(--maintext);
+      border-radius: var(--size-10);
+      box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+      padding:var(--sizeper-3);
+/*      margin: var(--sizeper-3);*/
+  }
+
+  .technology-used{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('https://media.istockphoto.com/id/1328691808/vector/gradient-background-simple-light-blue-vector-design.jpg?s=612x612&w=0&k=20&c=4hrIcip7lB6WoSgc4sahJYTPSEM67EVi-7d4KtcGY9M=');
+    background-size: cover;
+    padding:5% 10%!important;
+  }
+
+  .technology-used-childContainer .row .col-lg-3{
+    padding:50px!important;
+    background-color:white; 
+    border: 1px solid rgb(228, 228, 228);
+     box-shadow: 0 14px 8px 0 rgba(0, 0, 0, 0.2), 10px 16px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+   .technology-used-childContainer .row .col-lg-3 span{
+      display: flex;
+       justify-content: center;
+   }
+   .technology-used-childContainer .row .col-lg-3 span i{
+     font-size: 2rem;
+   }
+
+          .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display:flex;
+             justify-content:center;
+              align-items: center;
+            position: relative;
+        }
+        .circle::before,
+        .circle::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid;
+            box-sizing: border-box;
+        }
+        .circle::after {
+            border-color: var(--normaltext) var(--normaltext) var(--normaltext) var(--normaltext);
+            clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%  );
+        }
+        .circle::before {
+            border-color: var(--normaltext) var(--normaltext) var(--normaltext) var(--normaltext);
+            clip-path: polygon( 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 0% 20%);
+        }
+/*technology page end*/
+
+/*faq start*/
+/*============faq==============*/
+#flip1{
+    padding: 2%;
+    margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips1{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    border:1px solid var(--maintext);
+    color:var(--normaltext);
+}
+#flip2{
+    padding: 2%;
+  margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips2{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    border:1px solid var(--maintext);
+    color:var(--normaltext);
+}
+#flip3{
+    padding: 2%;
+    margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips3{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    border:1px solid var(--maintext);
+    color:var(--normaltext);
+}
+#flip4{
+    padding: 2%;
+    margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips4{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    background-color:white;
+    border:1px solid var(--maintext);
+    color:rgb(219, 32, 12);
+}
+#flip5{
+    padding: 2%;
+    margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips5{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    border:1px solid var(--maintext);
+    color:var(--normaltext);
+}
+#flip6{
+    padding: 2%;
+    margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips6{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    border:1px solid var(--maintext);
+    color:var(--normaltext);
+}
+#flip7{
+    padding: 2%;
+    margin: 4% 0 0 0;
+    background-color: var(--maintext);
+    color:var(--whitecolor);
+}
+#flips7{
+    display: none;
+    padding: 2%;
+    text-align: center;
+    border:1px solid var(--maintext);
+    color:var(--normaltext);
+}
+.faq-col:hover{
+    background-color: rgb(219, 32, 12);
+    color: white;
+}
+
+.faqs span{
+    font-size: larger;
+    cursor:pointer;
+}
+/*faq end*/
